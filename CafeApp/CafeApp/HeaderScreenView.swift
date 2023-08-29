@@ -9,6 +9,23 @@ import UIKit
 
 class HeaderScreenView: UIView {
     
+    let cafeLabel: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.font = .systemFont(ofSize: 26, weight: .bold, width: .expanded)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    
+    let image: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+    
+ 
+    
     /* TODO: - Going to create the HeaderView of the Main Screen.
     
         Need to create the top of the main page that has the UILabel Hank Cafe and UIImage of the Coffee
@@ -20,12 +37,5 @@ class HeaderScreenView: UIView {
      
      */
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

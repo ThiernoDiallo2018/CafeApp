@@ -7,7 +7,10 @@
 
 import UIKit
 
-class TableViewCoffeeCellTableViewCell: UITableViewCell {
+class CoffeeTableViewCell: UITableViewCell {
+    
+    
+    static let id: String = "CoffeeTableViewCell"
     
     /* TODO: -
     

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005F761F2A9C473D004391EA /* TableViewCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F761E2A9C473D004391EA /* TableViewCoffee.swift */; };
-		005F76212A9C4752004391EA /* TableViewCoffeeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F76202A9C4752004391EA /* TableViewCoffeeCellTableViewCell.swift */; };
+		005F76212A9C4752004391EA /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F76202A9C4752004391EA /* CoffeeTableViewCell.swift */; };
 		005F76232A9C478F004391EA /* HeaderScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F76222A9C478F004391EA /* HeaderScreenView.swift */; };
+		006049832A9D803D004E2D89 /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006049822A9D803D004E2D89 /* BottomViewController.swift */; };
 		00B24A3D2A7A03BA00AD947B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B24A3C2A7A03BA00AD947B /* AppDelegate.swift */; };
 		00B24A3F2A7A03BA00AD947B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B24A3E2A7A03BA00AD947B /* SceneDelegate.swift */; };
 		00B24A412A7A03BA00AD947B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B24A402A7A03BA00AD947B /* MainViewController.swift */; };
@@ -18,9 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		005F761E2A9C473D004391EA /* TableViewCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCoffee.swift; sourceTree = "<group>"; };
-		005F76202A9C4752004391EA /* TableViewCoffeeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCoffeeCellTableViewCell.swift; sourceTree = "<group>"; };
+		005F76202A9C4752004391EA /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
 		005F76222A9C478F004391EA /* HeaderScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderScreenView.swift; sourceTree = "<group>"; };
+		006049822A9D803D004E2D89 /* BottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
 		00B24A392A7A03BA00AD947B /* CafeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B24A3C2A7A03BA00AD947B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B24A3E2A7A03BA00AD947B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,10 +63,10 @@
 				00B24A3C2A7A03BA00AD947B /* AppDelegate.swift */,
 				00B24A3E2A7A03BA00AD947B /* SceneDelegate.swift */,
 				00B24A402A7A03BA00AD947B /* MainViewController.swift */,
+				006049822A9D803D004E2D89 /* BottomViewController.swift */,
 				005F76222A9C478F004391EA /* HeaderScreenView.swift */,
 				00B24A452A7A03BC00AD947B /* Assets.xcassets */,
-				005F761E2A9C473D004391EA /* TableViewCoffee.swift */,
-				005F76202A9C4752004391EA /* TableViewCoffeeCellTableViewCell.swift */,
+				005F76202A9C4752004391EA /* CoffeeTableViewCell.swift */,
 				00B24A472A7A03BC00AD947B /* LaunchScreen.storyboard */,
 				00B24A4A2A7A03BC00AD947B /* Info.plist */,
 			);
@@ -150,8 +150,8 @@
 				00B24A3D2A7A03BA00AD947B /* AppDelegate.swift in Sources */,
 				00B24A3F2A7A03BA00AD947B /* SceneDelegate.swift in Sources */,
 				005F76232A9C478F004391EA /* HeaderScreenView.swift in Sources */,
-				005F76212A9C4752004391EA /* TableViewCoffeeCellTableViewCell.swift in Sources */,
-				005F761F2A9C473D004391EA /* TableViewCoffee.swift in Sources */,
+				005F76212A9C4752004391EA /* CoffeeTableViewCell.swift in Sources */,
+				006049832A9D803D004E2D89 /* BottomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
