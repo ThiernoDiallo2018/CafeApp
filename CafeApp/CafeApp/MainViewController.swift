@@ -22,7 +22,6 @@ class MainViewController: UIViewController {
         let logo = UIImageView()
         logo.image = UIImage(named: "logo_coffee")
         logo.translatesAutoresizingMaskIntoConstraints = false
-        logo.layer.shadowColor = .init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         logo.contentMode = .scaleAspectFit
         return logo
     }()
@@ -40,7 +39,6 @@ class MainViewController: UIViewController {
     let bottomViewContainer: UIView = {
         let bottomContainer = UIView()
         bottomContainer.translatesAutoresizingMaskIntoConstraints = false
-        bottomContainer.backgroundColor = UIColor(red: 240/255, green: 210/255, blue: 170/255, alpha: 1)
         bottomContainer.layer.cornerRadius = 30
         return bottomContainer
     }()

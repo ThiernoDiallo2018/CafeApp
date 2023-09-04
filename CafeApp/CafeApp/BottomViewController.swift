@@ -14,8 +14,6 @@ class BottomViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 30
-        view.backgroundColor = .green
-       // view.tintColor = UIColor(red: 240/255, green: 210/255, blue: 170/255, alpha: 1)
         view.register(CoffeeTableViewCell.self, forCellReuseIdentifier: CoffeeTableViewCell.id)
         return view
     }()
