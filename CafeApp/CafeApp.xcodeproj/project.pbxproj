@@ -16,6 +16,9 @@
 		00B24A412A7A03BA00AD947B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B24A402A7A03BA00AD947B /* MainViewController.swift */; };
 		00B24A462A7A03BC00AD947B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B24A452A7A03BC00AD947B /* Assets.xcassets */; };
 		00B24A492A7A03BC00AD947B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B24A472A7A03BC00AD947B /* LaunchScreen.storyboard */; };
+		00F985232AD1FD8F0022CB63 /* DrinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F985222AD1FD8F0022CB63 /* DrinksModel.swift */; };
+		00F985252AD1FFA30022CB63 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F985242AD1FFA30022CB63 /* FoodModel.swift */; };
+		00F985272AD1FFDC0022CB63 /* MerchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F985262AD1FFDC0022CB63 /* MerchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		00B24A452A7A03BC00AD947B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00B24A482A7A03BC00AD947B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00B24A4A2A7A03BC00AD947B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F985222AD1FD8F0022CB63 /* DrinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksModel.swift; sourceTree = "<group>"; };
+		00F985242AD1FFA30022CB63 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		00F985262AD1FFDC0022CB63 /* MerchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +70,51 @@
 			children = (
 				00B24A3C2A7A03BA00AD947B /* AppDelegate.swift */,
 				00B24A3E2A7A03BA00AD947B /* SceneDelegate.swift */,
-				00B24A402A7A03BA00AD947B /* MainViewController.swift */,
-				006049822A9D803D004E2D89 /* BottomViewController.swift */,
-				005F76222A9C478F004391EA /* HeaderScreenView.swift */,
-				00B24A452A7A03BC00AD947B /* Assets.xcassets */,
-				00B13FC92AA3F6F40012561D /* CoffeeModel.swift */,
-				005F76202A9C4752004391EA /* CoffeeTableViewCell.swift */,
+				00F985282AD2004E0022CB63 /* Models */,
+				00F985292AD200660022CB63 /* ViewControllers */,
+				00F9852A2AD200830022CB63 /* Views */,
+				00F9852D2AD200B10022CB63 /* Cells */,
 				00B24A472A7A03BC00AD947B /* LaunchScreen.storyboard */,
 				00B24A4A2A7A03BC00AD947B /* Info.plist */,
+				00B24A452A7A03BC00AD947B /* Assets.xcassets */,
 			);
 			path = CafeApp;
+			sourceTree = "<group>";
+		};
+		00F985282AD2004E0022CB63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00B13FC92AA3F6F40012561D /* CoffeeModel.swift */,
+				00F985222AD1FD8F0022CB63 /* DrinksModel.swift */,
+				00F985242AD1FFA30022CB63 /* FoodModel.swift */,
+				00F985262AD1FFDC0022CB63 /* MerchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00F985292AD200660022CB63 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				00B24A402A7A03BA00AD947B /* MainViewController.swift */,
+				006049822A9D803D004E2D89 /* BottomViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		00F9852A2AD200830022CB63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				005F76222A9C478F004391EA /* HeaderScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00F9852D2AD200B10022CB63 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				005F76202A9C4752004391EA /* CoffeeTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,7 +148,7 @@
 					New,
 				);
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					00B24A382A7A03BA00AD947B = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -149,11 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F985232AD1FD8F0022CB63 /* DrinksModel.swift in Sources */,
 				00B13FCA2AA3F6F40012561D /* CoffeeModel.swift in Sources */,
 				00B24A412A7A03BA00AD947B /* MainViewController.swift in Sources */,
 				00B24A3D2A7A03BA00AD947B /* AppDelegate.swift in Sources */,
 				00B24A3F2A7A03BA00AD947B /* SceneDelegate.swift in Sources */,
+				00F985272AD1FFDC0022CB63 /* MerchModel.swift in Sources */,
 				005F76232A9C478F004391EA /* HeaderScreenView.swift in Sources */,
+				00F985252AD1FFA30022CB63 /* FoodModel.swift in Sources */,
 				005F76212A9C4752004391EA /* CoffeeTableViewCell.swift in Sources */,
 				006049832A9D803D004E2D89 /* BottomViewController.swift in Sources */,
 			);
@@ -177,6 +221,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -209,6 +254,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -237,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -269,6 +316,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
