@@ -8,7 +8,8 @@
 import UIKit
 
 class CoffeeTableViewCell: UITableViewCell {
-        
+    
+    // MARK: - Properties
     static let id: String = "CoffeeTableViewCell"
     
     private let stackView: UIStackView = {
@@ -18,14 +19,12 @@ class CoffeeTableViewCell: UITableViewCell {
         stackView.distribution = .fillProportionally
         return stackView
     }()
-            
     private var cellLogo: UIImageView = {
         let logo = UIImageView()
         logo.translatesAutoresizingMaskIntoConstraints = false
         logo.contentMode = .scaleAspectFit
         return logo
     }()
-    
     private var cellTitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +32,6 @@ class CoffeeTableViewCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
-    
     private var cellDescription: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +39,6 @@ class CoffeeTableViewCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
-    
     private var cellPrice: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -49,17 +46,15 @@ class CoffeeTableViewCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
-    
-    
+    // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpUI()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    // MARK: - Functions
     private func setUpUI() {
         
         stackView.addArrangedSubview(cellTitle)
@@ -70,7 +65,6 @@ class CoffeeTableViewCell: UITableViewCell {
         contentView.addSubview(cellPrice)
         
         NSLayoutConstraint.activate([
-                                    
             cellLogo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             cellLogo.heightAnchor.constraint(equalToConstant: 41),
             cellLogo.widthAnchor.constraint(equalToConstant: 40),
@@ -85,7 +79,6 @@ class CoffeeTableViewCell: UITableViewCell {
                            
     ])
 }
-
     func configureCell(itemTitle: String, itemPrice: String, itemImage: UIImage, itemDescription: String) {
         cellTitle.text = itemTitle
         cellLogo.image = itemImage

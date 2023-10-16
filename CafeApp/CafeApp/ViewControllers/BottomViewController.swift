@@ -6,39 +6,46 @@
 //
 
 import UIKit
-
-
 class BottomViewController: UIViewController {
-    
 // MARK: - Properties
     
-var coffeeModel: CoffeeModel
+    enum SectionType: Int, CaseIterable {
+        case drinks, food, merch
+        
+        var title: String {
+            switch self {
+            case .drinks:
+                return "Drinks"
+            case .food:
+                return "Food"
+            case .merch:
+                return "Merch * Other"
+            }
+        }
+    }
+    
+  private var coffeeModel: CoffeeModel
     
    lazy var tableView: UITableView = {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 30
         view.register(CoffeeTableViewCell.self, forCellReuseIdentifier: CoffeeTableViewCell.id)
+        view.register(CafeHeaderView.self, forHeaderFooterViewReuseIdentifier: CafeHeaderView.id)
         view.backgroundColor = UIColor(red: 210/255.0, green: 180/255.0, blue: 140/255.0, alpha: 0.5)
         view.layer.cornerRadius = 15
         return view
     }()
-    
-    
 // MARK: - Lifecycle
-    
     override func didMove(toParent parent: UIViewController?) {}
     
     init(coffeeModel: CoffeeModel = CoffeeModel()) {
         self.coffeeModel = coffeeModel
         super.init(nibName: nil, bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,18 +60,15 @@ var coffeeModel: CoffeeModel
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
-        
     }
 }
 
 // MARK: - Extensions + Function
-
 extension BottomViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -81,9 +85,7 @@ extension BottomViewController: UITableViewDataSource {
          If all of the data was in one single array similar to how I had it before (check the model page) then at that point you could just do product.count and it will print Everything. Being that i broke it up into sections, this would be the ideal route. 
          
          */
-        
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CoffeeTableViewCell.id, for: indexPath) as? CoffeeTableViewCell else {
             
@@ -106,8 +108,6 @@ extension BottomViewController: UITableViewDataSource {
         if let product = product {
             cell.configureCell(itemTitle: product.name, itemPrice: product.price, itemImage: product.picture, itemDescription: product.description)
         }
-        
-        
         /*
          * This route is the easiest way to declare data within the tableView. You access the model's index path row through initializing it and configuring it through the function to bring the data over
 
@@ -124,13 +124,25 @@ extension BottomViewController: UITableViewDataSource {
          cell.contentConfiguration = contentsOfCell //cell needs to access the configurations
 
          */
-        
-        
-        cell.backgroundColor = UIColor(red: 210/255.0, green: 180/255.0, blue: 140/255.0, alpha: 0.5)
+        cell.backgroundColor = UIColor(red: 210/255.0, green: 180/255.0, blue: 140/255.0, alpha: 1.5)
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CafeHeaderView") as? CafeHeaderView,
+              let sectionType = SectionType(rawValue: section)
+                
+        else { 
+            return nil
+            
+            }
+        
+        headerView.configure(headerTitle: sectionType.title)
+        return headerView
+    }
+
+   /*
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -143,9 +155,8 @@ extension BottomViewController: UITableViewDataSource {
             nil
         }
     }
-    
+    */
 }
-
 extension BottomViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

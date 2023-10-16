@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		005F76212A9C4752004391EA /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F76202A9C4752004391EA /* CoffeeTableViewCell.swift */; };
-		005F76232A9C478F004391EA /* HeaderScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F76222A9C478F004391EA /* HeaderScreenView.swift */; };
+		005F76232A9C478F004391EA /* CafeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005F76222A9C478F004391EA /* CafeHeaderView.swift */; };
 		006049832A9D803D004E2D89 /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006049822A9D803D004E2D89 /* BottomViewController.swift */; };
 		00B13FCA2AA3F6F40012561D /* CoffeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B13FC92AA3F6F40012561D /* CoffeeModel.swift */; };
 		00B24A3D2A7A03BA00AD947B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B24A3C2A7A03BA00AD947B /* AppDelegate.swift */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		005F76202A9C4752004391EA /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
-		005F76222A9C478F004391EA /* HeaderScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderScreenView.swift; sourceTree = "<group>"; };
+		005F76222A9C478F004391EA /* CafeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeHeaderView.swift; sourceTree = "<group>"; };
 		006049822A9D803D004E2D89 /* BottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
 		00B13FC92AA3F6F40012561D /* CoffeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeModel.swift; sourceTree = "<group>"; };
 		00B24A392A7A03BA00AD947B /* CafeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +104,7 @@
 		00F9852A2AD200830022CB63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				005F76222A9C478F004391EA /* HeaderScreenView.swift */,
+				005F76222A9C478F004391EA /* CafeHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 				00B24A3D2A7A03BA00AD947B /* AppDelegate.swift in Sources */,
 				00B24A3F2A7A03BA00AD947B /* SceneDelegate.swift in Sources */,
 				00F985272AD1FFDC0022CB63 /* MerchModel.swift in Sources */,
-				005F76232A9C478F004391EA /* HeaderScreenView.swift in Sources */,
+				005F76232A9C478F004391EA /* CafeHeaderView.swift in Sources */,
 				00F985252AD1FFA30022CB63 /* FoodModel.swift in Sources */,
 				005F76212A9C4752004391EA /* CoffeeTableViewCell.swift in Sources */,
 				006049832A9D803D004E2D89 /* BottomViewController.swift in Sources */,

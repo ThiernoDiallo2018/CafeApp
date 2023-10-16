@@ -9,7 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    let cafeLabel: UILabel = {
+    // MARK: - Properties
+    
+  private let cafeLabel: UILabel = {
         let label = UILabel()
         label.text = "Diallo Cafe"
         label.textColor = .black
@@ -17,16 +19,14 @@ class MainViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    let logo: UIImageView = {
+  private let logo: UIImageView = {
         let logo = UIImageView()
         logo.image = UIImage(named: "logo_coffee")
         logo.translatesAutoresizingMaskIntoConstraints = false
         logo.contentMode = .scaleAspectFit
         return logo
     }()
-    
-    let stackView: UIStackView = {
+  private let stackView: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
@@ -34,16 +34,13 @@ class MainViewController: UIViewController {
         stack.distribution = .fill
         return stack
     }()
-    
-    
-    let bottomViewContainer: UIView = {
+   private let bottomViewContainer: UIView = {
         let bottomContainer = UIView()
         bottomContainer.translatesAutoresizingMaskIntoConstraints = false
         bottomContainer.layer.cornerRadius = 30
         return bottomContainer
     }()
-    
- 
+    // MARK: - Lifycycle
     
 
     override func viewDidLoad() {
@@ -58,16 +55,13 @@ class MainViewController: UIViewController {
         bottomViewController.view.frame = bottomViewContainer.frame
                
         setUpUI()
-
     }
+    // MARK: - Functions
     
     func setUpUI() {
-        
         setUpHeader()
         setUpBottomContainer()
     }
-    
-    
     func setUpHeader() {
         stackView.addArrangedSubview(logo)
         stackView.addArrangedSubview(cafeLabel)
@@ -77,12 +71,8 @@ class MainViewController: UIViewController {
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15)
-        
         ])
-
-        
     }
-    
     func setUpBottomContainer() {
         view.addSubview(bottomViewContainer)
         
@@ -93,7 +83,4 @@ class MainViewController: UIViewController {
             bottomViewContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    
-
-
 }
